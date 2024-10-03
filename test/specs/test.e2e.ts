@@ -1,6 +1,8 @@
-import LoginPage from '../pageobjects/login.page.js'
+import LoginPage from '../pageobjects/login.page.js';
 
-describe('My Login application', () => {
+describe('My Login application', function() {
+    this.retries(3);
+
     it('should login with valid credentials', async () => {
         await browser.url('https://www.sky.com/');
 
@@ -9,6 +11,7 @@ describe('My Login application', () => {
    //     await LoginPage.tapOnGetSkyGlassDeals();
         await LoginPage.selectGreenTV();
 
+        await LoginPage.selectGreenSpeaker();
         await LoginPage.selectGreenSpeaker();
         await LoginPage.getGreenSpeakerPrice();
         await LoginPage.tapOnContinueConfigurationButton();
