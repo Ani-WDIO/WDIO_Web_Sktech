@@ -28,10 +28,12 @@ export const config: WebdriverIO.Config = {
 
     suites: {
         first: [
-            './test/specs/test.e2e.ts'
+            './test/specs/test.e2e.ts',
+            './test/specs/test.e2e copy.ts'
         ],
         second: [
-            './test/specs/test.e2e copy.ts'
+            './test/specs/test.e2e copy.ts',
+            './test/specs/test.e2e.ts'
         ]
     },
     // Patterns to exclude.
