@@ -25,6 +25,15 @@ export const config: WebdriverIO.Config = {
     specs: [
         './test/specs/**/*.ts'
     ],
+
+    suites: {
+        first: [
+            './test/specs/test.e2e.ts'
+        ],
+        second: [
+            './test/specs/test.e2e copy.ts'
+        ]
+    },
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
